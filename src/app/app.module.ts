@@ -7,6 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {PetComponent} from './pet/pet.component';
 import {PetListComponent} from './pet/pet-list.component';
 import {AppPetService} from './shared/pet.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {AppPetService} from './shared/pet.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     ToastrModule.forRoot()

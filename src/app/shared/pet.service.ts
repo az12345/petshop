@@ -15,7 +15,7 @@ export class AppPetService{
     var body = JSON.stringify(pet);
     var headerOptions = new Headers({'Content-Type':'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Post,headers : headerOptions});
-    return this.http.post('https://petshop-application.herokuapp.com/api',body,requestOptions).map(x => x.json());
+    return this.http.post('https://petshop-application.herokuapp.com/api',body, requestOptions).map(x => x.json());
   }
 
   putPet(id, pet) {
