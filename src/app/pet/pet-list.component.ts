@@ -25,12 +25,14 @@ export class PetListComponent implements OnInit {
     if (confirm('Are you sure to delete this record ?') == true) {
       this.petService.deletePet(id)
         .subscribe(x => {
-          console.log(x);
+          // setTimeout(()=>{
+            this.petService.getPetList();
+          // },3000);
         });
 
-      this.petService.getPetList();
-      console.log(this.petService.getPetList());
+      // console.log(this.petService.getPetList());
       this.toastr.warning("Deleted Successfully","Pet Register");
     }
   }
+
 }
